@@ -15,10 +15,11 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    working-directory: ./task-manager-app
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        path: 'task-manager-app'
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
